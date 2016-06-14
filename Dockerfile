@@ -19,8 +19,8 @@ RUN /usr/local/bin/pip3 install psycopg2
 # add the userlist, spawner, and authenticator
 RUN mkdir /srv/jupyterhub_config
 WORKDIR /srv/jupyterhub_config
-ADD swarmspawner.py /srv/jupyterhub_config/swarmspawner.py
-ADD docker_oauth.py /srv/jupyterhub_config/docker_oauth.py
+# ADD swarmspawner.py /srv/jupyterhub_config/swarmspawner.py
+# ADD docker_oauth.py /srv/jupyterhub_config/docker_oauth.py
 ADD jupyterhub_config.py /srv/jupyterhub_config/jupyterhub_config.py
 
 # create /srv/jupyterhub_users directory (which is where we'll mount the userlist)
